@@ -1,0 +1,29 @@
+name: LolCrates
+version: '1.0'
+main: com.lolcrates.Main
+api-version: '1.21'
+description: Плагин на кейсы PaperMC 1.21.x
+authors:
+  - Lollik_bttw
+
+commands:
+  lolcrate:
+    description: Управление плагином LolCrates
+    usage: |
+      /<command> — справка
+      /<command> reload — перезагрузить конфиг
+      /<command> give <игрок> <crate_id> — выдать кейс
+    aliases:
+      - lolcrates
+      - crate
+      - crates
+      - lc
+      - cl
+
+permissions:
+  lolcrates.use:
+    description: Разрешает открывать кейсы
+    default: true
+  lolcrates.admin:
+    description: Перезагрузка конфига, выдача кейсов и обход логики через Shift+ПКМ
+    default: op

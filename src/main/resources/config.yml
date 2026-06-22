@@ -1,0 +1,168 @@
+# Конфигурационный файл плагина LolCrates v1.0 BETA by Lollik_bttw
+# telegram https://t.me/astrixdev subscribe pls
+
+settings:
+  # префикс для сообщений
+  message-prefix: "<gray>[<gold>Кейс</gold>]</gray> "
+  # звук открытия шалкера
+  open-sound: ENTITY_EXPERIENCE_ORB_PICKUP
+  # звук закрытия шалкера
+  close-sound: ENTITY_GENERIC_EXPLODE
+  # разрешение для открытия кейсов
+  require-permission: lolcrates.use
+  # анимация при открытии (true/false)
+  open-animation: true
+  # сообщение о выигрыше
+  win-message: "<prefix><green>Вы выиграли <gold>{reward}</gold>!</green>"
+  no-permission-message: "<gray>[<red>Кейсы</red>]</gray> <red>У вас нет доступа к этому кейсу.</red>"
+  no-rewards-message: "<gray>[<red>Кейсы</red>]</gray> <red>У этого кейса не настроены награды.</red>"
+  give-success-sender: "<prefix><green>Кейс <gold>{crate}</gold> выдан игроку <yellow>{player}</yellow>.</green>"
+  give-success-target: "<prefix><green>Вы получили кейс <gold>{crate}</gold>!</green>"
+  unknown-crate-id: "<prefix><red>Кейс с ID <yellow>{crate_id}</yellow> не найден в конфиге.</red>"
+  unknown-player: "<prefix><red>Игрок <yellow>{player}</yellow> не найден или не в сети.</red>"
+
+crates:
+  common:
+    material: GRAY_SHULKER_BOX
+    display-name: "<gray>Обычный кейс</gray>"
+    lore:
+      - "<gray>Обычный кейс с наградами</gray>"
+    key-material: TRIPWIRE_HOOK
+    key-name: "<gray>Ключ от обычного кейса</gray>"
+    rewards:
+      - name: "Алмаз!"
+        chance: 40
+        type: COMMAND
+        display-material: DIAMOND
+        value: "give {player} diamond 1"
+      - name: "Золотой слиток!"
+        chance: 30
+        type: COMMAND
+        display-material: GOLD_INGOT
+        value: "give {player} gold_ingot 2"
+      - name: "Железный слиток!"
+        chance: 30
+        type: COMMAND
+        display-material: IRON_INGOT
+        value: "give {player} iron_ingot 3"
+
+  rare:
+    material: BLUE_SHULKER_BOX
+    display-name: "<blue>Редкий кейс</blue>"
+    lore:
+      - "<gray>Редкий кейс с особыми наградами</gray>"
+    key-material: TRIPWIRE_HOOK
+    key-name: "<blue>Ключ от редкого кейса</blue>"
+    rewards:
+      - name: "Изумруд!"
+        chance: 30
+        type: COMMAND
+        display-material: EMERALD
+        value: "give {player} emerald 2"
+      - name: "Алмазный меч!"
+        chance: 20
+        type: COMMAND
+        display-material: DIAMOND_SWORD
+        value: "give {player} diamond_sword 1"
+      - name: "Золотая броня!"
+        chance: 25
+        type: COMMAND
+        display-material: GOLDEN_CHESTPLATE
+        value: "give {player} golden_chestplate 1"
+      - name: "Опыт!"
+        chance: 25
+        type: COMMAND
+        display-material: EXPERIENCE_BOTTLE
+        value: "give {player} experience_bottle 16"
+
+  epic:
+    material: PURPLE_SHULKER_BOX
+    display-name: "<light_purple>Эпический кейс</light_purple>"
+    lore:
+      - "<gray>Эпический кейс с особыми наградами</gray>"
+    key-material: TRIPWIRE_HOOK
+    key-name: "<light_purple>Ключ от эпического кейса</light_purple>"
+    rewards:
+      - name: "Алмазный набор!"
+        chance: 15
+        type: COMMAND
+        display-material: DIAMOND
+        value: "give {player} diamond 5"
+      - name: "Зачарованный лук!"
+        chance: 20
+        type: COMMAND
+        display-material: BOW
+        value: "minecraft:give Lollik_bttw minecraft:bow[minecraft:enchantments={'minecraft:power':3}]"
+      - name: "Книга чар!"
+        chance: 35
+        type: COMMAND
+        display-material: ENCHANTED_BOOK
+        value: "give {player} enchanted_book 1"
+      - name: "Кварц!"
+        chance: 30
+        type: COMMAND
+        display-material: QUARTZ
+        value: "give {player} quartz 10"
+
+  legendary:
+    material: YELLOW_SHULKER_BOX
+    display-name: "<gold>Легендарный кейс</gold>"
+    lore:
+      - "<gray>Легендарный кейс с особыми наградами</gray>"
+    key-material: TRIPWIRE_HOOK
+    key-name: "<gold>Ключ от легендарного кейса</gold>"
+    rewards:
+      - name: "Незеритовый слиток!"
+        chance: 10
+        type: COMMAND
+        display-material: NETHERITE_INGOT
+        value: "give {player} netherite_ingot 1"
+      - name: "Алмазный блок!"
+        chance: 20
+        type: COMMAND
+        display-material: DIAMOND_BLOCK
+        value: "give {player} diamond_block 1"
+      - name: "Зачарованная кирка!"
+        chance: 30
+        type: COMMAND
+        display-material: DIAMOND_PICKAXE
+        value: "minecraft:give Lollik_bttw minecraft:diamond_pickaxe[minecraft:enchantments={'minecraft:efficiency':3}]"
+      - name: "Шалкер!"
+        chance: 40
+        type: COMMAND
+        display-material: WHITE_SHULKER_BOX
+        value: "give {player} white_shulker_box 1"
+
+  ultra:
+    material: RED_SHULKER_BOX
+    display-name: "<red>Ультра кейс</red>"
+    lore:
+      - "<gray>Ультра кейс с особыми наградами</gray>"
+    key-material: GOLD_NUGGET
+    key-name: "<red>Ключ от ультра кейса</red>"
+    rewards:
+      - name: "Незерит полный!"
+        chance: 5
+        type: COMMAND
+        display-material: NETHERITE_CHESTPLATE
+        value: "give {player} netherite_chestplate 1"
+      - name: "Тотем бессмертия!"
+        chance: 15
+        type: COMMAND
+        display-material: TOTEM_OF_UNDYING
+        value: "give {player} totem_of_undying 1"
+      - name: "Элитра!"
+        chance: 20
+        type: COMMAND
+        display-material: ELYTRA
+        value: "give {player} elytra 1"
+      - name: "Яйцо дракона!"
+        chance: 10
+        type: COMMAND
+        display-material: DRAGON_EGG
+        value: "give {player} dragon_egg 1"
+      - name: "Золотой обед!"
+        chance: 50
+        type: COMMAND
+        display-material: GOLDEN_APPLE
+        value: "give {player} golden_apple 8"
