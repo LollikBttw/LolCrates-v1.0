@@ -25,5 +25,5 @@ permissions:
     description: Разрешает открывать кейсы
     default: true
   lolcrates.admin:
-    description: Перезагрузка конфига, выдача кейсов и обход логики через Shift+ПКМ
+    description: Перезагрузка конфига, выдача кейсов.
     default: op
